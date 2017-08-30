@@ -42,3 +42,4 @@ Record and upload a screenshot of the Miner Activity chart.
 Edit the Baseline Miner Network Activity chart and replace the URL with the link to your own image.
 
 Edit the remaining visualizations by replacing the source IP address with the address of your own miner.
+![BitSecure](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/529/620/datas/gallery.jpg "BitSecure")
