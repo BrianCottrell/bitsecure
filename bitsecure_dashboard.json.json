@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "BitSecure",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BitSecure",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":7,\"id\":\"Miner-Activity\",\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Baseline-Chart\",\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"id\":\"Unexpected-Miner-Activity\",\"type\":\"visualization\",\"size_x\":6,\"size_y\":3,\"col\":1,\"row\":1},{\"id\":\"Unexpected-Activity-Table\",\"type\":\"visualization\",\"size_x\":6,\"size_y\":3,\"col\":1,\"row\":4}]",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}}}]}"
+      }
+    }
+  }
+]

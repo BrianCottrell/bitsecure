@@ -1,0 +1,54 @@
+[
+  {
+    "_id": "Baseline-Chart",
+    "_type": "visualization",
+    "_source": {
+      "title": "Baseline Chart",
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"![alt text](http://i.imgur.com/oso8hvi.png \\\"BitSecure Baselin Chart\\\")\"},\"aggs\":[],\"listeners\":{}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Miner-Activity",
+    "_type": "visualization",
+    "_source": {
+      "title": "Miner Activity",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalBytesDelta\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Application\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"custom\",\"orderAgg\":{\"id\":\"3-orderAgg\",\"type\":\"sum\",\"schema\":\"orderAgg\",\"params\":{\"field\":\"TotalBytesDelta\"}}}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"TimeUpdated\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[network_]YYYY_MM_DD\",\"query\":{\"query_string\":{\"query\":\"SrcIP:192.168.1.167 AND NOT DestIP:192.168.1.168 AND NOT Application:windows_update\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Unexpected-Activity-Table",
+    "_type": "visualization",
+    "_source": {
+      "title": "Unexpected Activity Table",
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"Application\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"DestIP\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"TimeUpdated\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"5\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ApplicationID\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[network_]YYYY_MM_DD\",\"query\":{\"query_string\":{\"query\":\"SrcIP:192.168.1.167 AND NOT DestIP:192.168.1.168 AND NOT DestIP:176.9.122.21 AND NOT DestIP:54.164.249.133 AND NOT DestIP:138.201.20.89 AND NOT DestIP:208.64.201.169 AND NOT DestIP:192.168.1.254\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "Unexpected-Miner-Activity",
+    "_type": "visualization",
+    "_source": {
+      "title": "Unexpected Miner Activity",
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"TotalBytesDelta\"}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"Application\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"custom\",\"orderAgg\":{\"id\":\"3-orderAgg\",\"type\":\"sum\",\"schema\":\"orderAgg\",\"params\":{\"field\":\"TotalBytesDelta\"}}}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"TimeUpdated\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[network_]YYYY_MM_DD\",\"query\":{\"query_string\":{\"query\":\"SrcIP:192.168.1.167 AND NOT DestIP:192.168.1.168 AND NOT DestIP:176.9.122.21 AND NOT DestIP:54.164.249.133 AND NOT DestIP:138.201.20.89 AND NOT DestIP:208.64.201.169\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      }
+    }
+  }
+]
